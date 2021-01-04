@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="426.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controller">
+   <children>
+  <AnchorPane fx:id="authorization_pane" minHeight="0.0" minWidth="0.0" prefHeight="12.0" prefWidth="899.0">
+         <children>
+            <TextField fx:id="username_login" alignment="CENTER" layoutX="293.0" layoutY="15.0" prefHeight="41.0" prefWidth="288.0" promptText="Ім'я користувача">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <ProgressBar fx:id="loading_indicator" layoutX="25.0" layoutY="323.0" prefHeight="22.0" prefWidth="808.0" progress="0.0" />
+            <Label fx:id="info_label" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="83.0" prefHeight="47.0" prefWidth="826.0" text="Label">
+               <font>
+                  <Font name="System Bold Italic" size="32.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="provided_num_input" alignment="CENTER" layoutX="334.0" layoutY="254.0" prefHeight="32.0" prefWidth="207.0" promptText="Введіть число">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="error" alignment="CENTER" contentDisplay="CENTER" layoutX="148.0" layoutY="153.0" prefHeight="22.0" prefWidth="563.0" text="Label" textFill="RED" visible="false">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="captcha_question" alignment="CENTER" layoutX="320.0" layoutY="205.0" prefHeight="29.0" prefWidth="109.0" text="2 + 2 = ?" visible="false">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="captcha_answer" layoutX="438.0" layoutY="198.0" prefHeight="44.0" prefWidth="107.0" visible="false">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Button fx:id="try_get_resource_button" layoutX="279.0" layoutY="366.0" mnemonicParsing="false" onAction="#handle_try_get_resource" prefHeight="37.0" prefWidth="315.0" text="Отримати доступ до ресурсу">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="secret_pane" prefHeight="441.0" prefWidth="899.0" visible="false">
+         <children>
+            <ImageView fx:id="secret_image" fitHeight="319.0" fitWidth="511.0" layoutX="194.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
+            <Label alignment="CENTER" layoutX="116.0" layoutY="-2.0" prefHeight="58.0" prefWidth="783.0" text="Ви отримали доступ до ресурсу!">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
