@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="508.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controller">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="521.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TextArea fx:id="inputText" layoutX="190.0" layoutY="174.0" prefHeight="51.0" prefWidth="413.0" promptText="Введіть текст" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="17.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="cipheredText" editable="false" layoutX="190.0" layoutY="282.0" prefHeight="51.0" prefWidth="414.0" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="17.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="decipheredText" editable="false" layoutX="189.0" layoutY="379.0" prefHeight="51.0" prefWidth="414.0" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="17.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="calcButton" layoutX="297.0" layoutY="451.0" mnemonicParsing="false" onAction="#onCalcButtonClicked" prefHeight="42.0" prefWidth="202.0" text="Обрахувати">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Label layoutX="272.0" layoutY="18.0" text="Алгоритм BlowFish">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="261.0" layoutY="246.0" prefHeight="27.0" prefWidth="270.0" text="Зашифрований текст">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="263.0" layoutY="344.0" prefHeight="27.0" prefWidth="270.0" text="Розшифрований текст">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="isDecipheredTextCorrect" alignment="CENTER" layoutX="652.0" layoutY="318.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="71.0" visible="false">
+               <font>
+                  <Font size="54.0" />
+               </font>
+            </CheckBox>
+            <TextArea fx:id="keyArea" layoutX="191.0" layoutY="85.0" prefHeight="55.0" prefWidth="414.0" promptText="Введіть значення ключа">
+               <font>
+                  <Font name="System Italic" size="17.0" />
+               </font>
+            </TextArea>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
